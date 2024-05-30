@@ -20,7 +20,7 @@ def log_and_print_online(role, content=None):
         print(role + "\n")
     else:
         print(str(role) + ": " + str(content) + "\n")
-        logging.info(str(role) + ": " + str(content) + "\n")
+        logging.info("%s: %s\n", str(role), str(content))
         if isinstance(content, SystemMessage):
             records_kv = []
             content.meta_dict["content"] = content.content
